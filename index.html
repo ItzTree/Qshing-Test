@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보보안 설문</title>
+    <!-- 외부 CSS 파일을 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 구글 폰트를 불러오기 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 전체 설문지를 감싸는 메인 컨테이너 -->
+    <div class="form-container">
+        
+        <!-- 설문지 머리말 부분 -->
+        <div class="form-header">
+            <h1>정보보안 설문</h1>
+            <p class="description">
+                정보보안 관심 정도를 파악하기 위해 간단한 설문조사를 진행하고자 합니다.<br>
+                약 1분 정도 소요될 예정입니다.
+            </p>
+            <p class="required-notice">* 표시는 필수 질문임</p>
+        </div>
+
+        <!-- 실제 설문 항목들이 들어가는 부분 -->
+        <form action="final.html"> <!-- action="#"은 제출 시 페이지 새로고침만 수행 (기능 없음) -->
+            
+            <!-- 질문 1: 학번 (단답형) -->
+            <div class="question-card">
+                <h2 class="question-title">학번 (ex. 2021) <span class="required-star">*</span></h2>
+                <div class="input-area">
+                    <input type="text" placeholder="내 답변" required>
+                </div>
+            </div>
+
+            <!-- 질문 2: 학년 (객관식) -->
+            <div class="question-card">
+                <h2 class="question-title">학년 <span class="required-star">*</span></h2>
+                <div class="choice-area">
+                    <label><input type="radio" name="grade" value="1"> <span>2학년 이하</span></label>
+                    <label><input type="radio" name="grade" value="2"> <span>3학년</span></label>
+                    <label><input type="radio" name="grade" value="3"> <span>4학년 이상</span></label>
+                </div>
+            </div>
+
+            <!-- 질문 3: 학과 (단답형) -->
+            <div class="question-card">
+                <h2 class="question-title">학과/학부 (ex. 컴퓨터학부) <span class="required-star">*</span></h2>
+                <div class="input-area">
+                    <input type="text" placeholder="내 답변" required>
+                </div>
+            </div>
+
+            <!-- 질문 4: 비밀번호 형식 (객관식) -->
+            <div class="question-card">
+                <h2 class="question-title">주로 사용하는 비밀번호 형식 <span class="required-star">*</span></h2>
+                <p class="question-description">
+                    의미있는 영어로는 한글을 그대로 친 qhdks(보안), 뜻이 있는 test 등을 포함<br>
+                    의미있는 숫자로는 생일이나 1234 등을 포함<br>
+                    특수문자는 제외
+                </p>
+                <div class="choice-area">
+                    <label><input type="radio" name="password_type" value="1"> <span>의미있는 영어 + 의미있는 숫자</span></label>
+                    <label><input type="radio" name="password_type" value="2"> <span>의미있는 영어 + 아무 숫자</span></label>
+                    <label><input type="radio" name="password_type" value="3"> <span>아무 영어 + 아무 숫자</span></label>
+                    <label><input type="radio" name="password_type" value="4"> <span>영어/숫자 섞어서</span></label>
+                    <label><input type="radio" name="password_type" value="5"> <span>그 외</span></label>
+                </div>
+            </div>
+
+            <!-- 제출 및 초기화 버튼 -->
+            <div class="form-footer">
+                <button type="submit" class="submit-button">다음</button>
+                <button type="reset" class="clear-button">양식 지우기</button>
+            </div>
+        </form>
+
+        <!-- 페이지 하단 푸터 -->
+        <footer>
+            <p>Google Forms 를 통해 비밀번호를 제출하지 마세요.</p>
+            <div class="google-logo">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_dark_clr_74x24px.svg" alt="Google Forms">
+                <span>Forms</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

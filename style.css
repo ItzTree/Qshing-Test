@@ -1,0 +1,194 @@
+/* --- 기본 스타일 초기화 및 설정 --- */
+body {
+    background-color: #F0EBF8; /* 구글폼 배경색과 유사하게 설정 */
+    font-family: 'Roboto', sans-serif; /* 구글 기본 폰트 */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #202124; /* 구글 기본 텍스트 색상 */
+}
+
+/* --- 메인 컨테이너 스타일 --- */
+.form-container {
+    max-width: 640px;
+    width: 100%;
+}
+
+/* --- 설문지 머리말 스타일 --- */
+.form-header {
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 24px;
+    border-top: 10px solid #673AB7; /* 상단 보라색 바 */
+    margin-bottom: 12px;
+}
+
+.form-header h1 {
+    font-size: 32px;
+    margin: 0 0 8px 0;
+}
+
+.form-header .description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.form-header .required-notice {
+    color: #d93025;
+    font-size: 12px;
+}
+
+/* --- 각 질문 카드 스타일 --- */
+.question-card {
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 12px;
+}
+
+.question-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+
+.required-star {
+    color: #d93025;
+    margin-left: 4px;
+}
+
+.question-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* --- 입력창 (단답형) 스타일 --- */
+.input-area input[type="text"] {
+    width: 50%; /* 너비를 절반으로 설정 */
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline: none;
+    font-size: 14px;
+    padding: 8px 0;
+    transition: border-bottom-color 0.3s;
+}
+
+.input-area input[type="text"]:focus {
+    border-bottom: 2px solid #673AB7; /* 포커스 시 보라색으로 강조 */
+}
+
+/* --- 선택지 (객관식) 스타일 --- */
+.choice-area label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.choice-area input[type="radio"] {
+    margin-right: 12px;
+    /* 기본 라디오 버튼 숨기기 (커스텀 디자인을 위해) */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5f6368;
+    border-radius: 50%;
+    outline: none;
+    transition: all 0.2s;
+}
+
+/* 라디오 버튼 선택 시 스타일 */
+.choice-area input[type="radio"]:checked {
+    border: 6px solid #673AB7; /* 보라색으로 채움 */
+}
+
+.choice-area span {
+    font-size: 14px;
+}
+
+/* --- 제출 버튼 부분 스타일 --- */
+.form-footer {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 정렬 */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-footer .submit-button {
+    background-color: #fff; /* 배경을 흰색으로 변경 */
+    color: #673AB7; /* 글씨를 보라색으로 변경 */
+    border: 1px solid #dadce0; /* 회색 테두리 추가 */
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-footer .submit-button:hover {
+    background-color: #F8F5FD; /* 아주 연한 보라색 배경으로 변경 */
+    border-color: #c9b7e4; /* 테두리 색도 약간 변경 */
+}
+
+.form-footer button {
+    background-color: #673AB7;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-footer button:hover {
+    background-color: #512DA8; /* 호버 시 약간 더 어둡게 */
+}
+
+.form-footer .clear-button {
+    background-color: transparent;
+    color: #673AB7;
+    font-weight: 500;
+}
+.form-footer .clear-button:hover {
+    background-color: #F0EBF8;
+}
+
+/* --- 하단 푸터 스타일 --- */
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #5f6368;
+    margin-top: 24px;
+}
+footer a {
+    color: #5f6368;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.google-logo {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.google-logo span {
+    font-size: 22px;
+    color: #5f6368;
+    margin-left: 4px;
+}
+
+.thank-you-message {
+    color: #d93025;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+}
