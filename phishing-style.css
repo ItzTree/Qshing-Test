@@ -81,3 +81,29 @@ body {
         text-shadow: 0 0 15px #ff0000;
     }
 }
+
+/* --- ▼▼▼ 모바일 화면을 위한 미디어 쿼리 (추가된 부분) ▼▼▼ --- */
+/* 화면의 가로 폭이 600px 이하일 때 아래 스타일을 적용합니다. */
+@media (max-width: 600px) {
+
+    /* body의 좌우 여백을 줄여 공간을 확보합니다. */
+    body {
+        padding: 10px;
+    }
+
+    /* 컨테이너 박스의 내부 여백도 줄여줍니다. */
+    .hacker-container {
+        padding: 20px;
+        border-width: 1px; /* 테두리를 약간 얇게 만들어 더 잘 보이게 합니다. */
+    }
+
+    /* 제목 글씨 크기를 약간 줄여서 한 줄에 잘 보이도록 합니다. */
+    .hacker-container .warning-title {
+        font-size: 2.2em;
+    }
+
+    /* 설명 텍스트 크기도 모바일에 맞게 살짝 줄입니다. */
+    .hacker-container .explanation {
+        font-size: 1em;
+    }
+}
